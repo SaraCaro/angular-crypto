@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "angularcrypto-591b2": {
+      "hosting": {
+        "criptoMoneda": [
+          "angularcrypto-591b2"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "angularcrypto-591b2"
+  }
+}

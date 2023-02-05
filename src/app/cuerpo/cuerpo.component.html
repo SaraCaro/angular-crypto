@@ -1,0 +1,45 @@
+<ul>
+    <li *ngFor="let moneda of datosApi.listaMonedas | slice: (page-1) * pageSize : page * pageSize">
+      <a (click)="monedaSeleccionada(moneda)">{{moneda.name}}</a>
+    </li>
+  </ul>
+  <ngb-pagination
+  [collectionSize]="this.datosApi.listaMonedas.length"
+  [pageSize]="pageSize"
+  [directionLinks]="false"
+  [(page)]="page"
+  class="w-100">
+</ngb-pagination>
+
+<table>
+    <thead>
+        <th>Image</th>
+        <th>Name</th>
+        <th>Symbol</th>
+        <th>Price (€)</th>
+        <th>Capitalization (€)</th>
+        <th>Volume (€)</th>
+        <th>Higher price (24h)</th>
+        <th>Lower price (24h)</th>
+        <th>Details</th>
+        <th>Actions</th>
+    </thead>
+    <tr *ngFor="let moneda of seleccionMoneda">
+        <img
+        src="{{ moneda.image.large }}"
+        alt="{{ moneda.name }}"
+        width="50px"
+        routerLink="/coin/{{moneda.id}}"
+      />
+        <td>{{ moneda.name }}</td>
+        <td>{{ moneda.symbol }}</td>
+        <td>{{ moneda.market_data.current_price.eur }}</td>
+        <td>{{ moneda.market_data.market_cap.eur }}</td>
+        <td>{{ moneda.market_data.total_volume.eur }}</td>
+        <td>{{ moneda.market_data.high_24h.eur }}</td>
+        <td>{{ moneda.market_data.low_24h.eur }}</td>
+        <td>
+            <i routerLink="/detalle-moneda/{{moneda.id}}" class="fa-solid fa-circle-info"></i>
+        </td>
+    </tr>
+</table>
