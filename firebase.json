@@ -1,6 +1,6 @@
 {
   "hosting": {
-    "public": "dist/cripto-moneda",
+    "public": "n",
     "ignore": [
       "firebase.json",
       "**/.*",
