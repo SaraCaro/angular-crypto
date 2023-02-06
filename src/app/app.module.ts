@@ -16,6 +16,8 @@ import { provideFirestore,getFirestore } from '@angular/fire/firestore';
 import { AppRoutingModule } from './app-routing.module';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from './login/login.component';
+import { RegisterComponent } from './register/register.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     PieComponent,
     CuerpoComponent,
     DetalleMonedaComponent,
-    LandingPageComponent
+    LandingPageComponent,
+    LoginComponent,
+    RegisterComponent
   ],
   imports: [
     BrowserModule,

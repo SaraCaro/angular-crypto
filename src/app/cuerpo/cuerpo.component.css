@@ -1,0 +1,52 @@
+ul li{
+    list-style: none;
+}
+
+a{
+    cursor: pointer;
+}
+
+i{
+    cursor: pointer;
+    transition: 0.3s;
+    padding: 10px;
+}
+
+i:hover{
+    transform: scale(1.5);
+    transition: 0.3s;
+    color: rgb(237, 54, 54);
+}
+
+#boton{
+    padding: 8px;
+}
+
+button{
+    border-radius: 5px;
+    border: 1px solid rgb(240, 184, 29);
+    background-color: rgb(240, 184, 29);
+    color: white;
+}
+
+button:hover{
+    background-color: white;
+    color: rgb(240, 184, 29);
+    transition: 0.3s;
+}
+
+
+table td{
+    text-align: center;
+    margin-top: 10rem !important;
+}
+
+ngb-pagination ::ng-deep ul > li:not(.active) > a {
+    background-color: white !important;
+    color: brown;
+}
+
+ngb-pagination ::ng-deep ul > li.active > a {
+    background-color: gray !important;
+    color: white !important;; 
+}

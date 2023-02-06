@@ -26,4 +26,9 @@ export class CuerpoComponent {
     else
       this.seleccionMoneda = new Array();
   }
+
+  eliminarMoneda(moneda:any){
+    this.seleccionMoneda.splice(this.seleccionMoneda.indexOf(moneda), 1);
+    localStorage.setItem("moneda", JSON.stringify(this.seleccionMoneda));
+  }
 }
